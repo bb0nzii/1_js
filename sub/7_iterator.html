@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iterator</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 100;
+            font-style: normal;
+        }
+        pre{background: lightyellow; padding: 10px; line-height: 25px; font-size: 14px; font-family: 'Pretendard-Thin';}
+        h1::before{content: "💖";}
+        h1::after{content: "💖";}
+    </style>
+</head>
+<body>
+
+<h1>반복 가능한 항목</h1>
+<pre>
+- 반복 가능한 객체(배열)
+- for ..of : 문자열의 요소를 반복할 수 있음
+- 일련의 요소를 반복하는 것을 의미
+- 배열 : 내장배열(정해져 있는 반복) & 외장배열(정해지지 않은 배열을 사용할 때)
+    ** 문자열 반복
+    ** 배열 반복
+</pre>
+<p id="one">BBONZI</p>
+
+<h1>Set 집합</h1>
+<pre>
+- 고유한 값의 컬렉션
+- 각 값은 Set에서 한 번만 발생할 수 있음
+- 중복(같은 값)을 허용하지 않음.
+    ex) BBONZI 아니고 BONZI로 출력됨
+</pre>
+<p id="two"></p>
+
+<h1>Map</h1>
+<pre>
+- 키와 값을 쌍으로 가지고 있음
+- 키 : 모든 데이터의 유형이 됨
+- 맵 : 원래의 삽입순서를 기억함
+- 여러 개의 값을 가지고 있는데 Map의 값을 가져올 때는 get()이라는 메소드를 사용하여 가져옴
+</pre>
+<p id = three></p>
+
+<script src="js/iter.js"></script>
+</body>
+</html>

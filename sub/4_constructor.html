@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4_생성자</title>
+        <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 100;
+            font-style: normal;
+        }
+        pre{background: lightyellow; padding: 10px; line-height: 25px; font-size: 14px; font-family: 'Pretendard-Thin';}
+        h1::before{content: "💖";}
+        h1::after{content: "💖";}
+    </style>
+</head>
+<body>
+<pre>
+<b>객체생성자</b>
+- 때로는 같은 유형의 객체를 많이 만들어야 할 때가 있음
+- 객체 유형을 생성하려면 객체생성자 함수를 사용해야 함
+- 함수의 이름은 첫글자를 대문자로 지어야 함
+</pre>
+    <hr style="margin: 20px 0;">
+    <p><mark id="find"></mark></p>
+    <script>
+        // var txt = "나는 어디서 나올지 예측할 수 없지롱";
+        // document.write(txt)
+
+        //함수는 호출할 때만 실행됨
+        //이건 함수이면서 생성자 : 무엇을 생성할지 규정함
+        function Person(first, last, age, eye){
+                        //괄호 안에 들어간 것이 매개변수 | 지금 이거랑 Person = () => {} 이거랑 똑같은 거임
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            //이거 그냥 똑같이 쓰는 게 편하긴 함 근데 오히려 헷갈릴 수도...
+        }
+
+        const BBONZI = new Person ("NZI", "BBO", 23, "brown");
+        const JINHEE = new Person ("JINHEE", "LEE", 27, "blue");
+
+        document.getElementById("find").innerHTML = 
+        "저는" + BBONZI.lastName + BBONZI.firstName + "입니당" + "<br>" +
+        "제 나이는" + BBONZI.age + "살 입니당 월드컵 못 본 2003년생임" + "<br>" +
+        "저는" + JINHEE.lastName + JINHEE.firstName + "입니당" + "<br>" +
+        "제 나이는" + JINHEE.age + "이고 눈 색깔은 " + JINHEE.eyeColor + "입니당 뻥이고 내맘대로 쓴 거임 메롱";
+    </script>
+
+    <hr style="margin: 20px 0;">
+    <div id="foodFind"></div>
+    <script>
+        function Lunch(one, two, three){
+            this.one = one;
+            this.two = two;
+            this.three = three;
+        }
+
+        const eat = new Lunch("1. 밥", "2. 빵", "3. 굶어!");
+        //인스턴스 객체
+        
+        document.getElementById("foodFind").innerHTML =
+        "오늘 점심은 무엇일까요"  + eat.one + "입니다";
+    </script>
+
+    <hr style="margin: 20px 0;">
+    <div id="last" style="color: red; font-weight: bold;"></div>
+    <script>
+        function FreeTime(yes, no, TT){
+            this.yes = yes;
+            this.no = no;
+            this.TT = TT;
+        }
+        const choice = new FreeTime("goOoOoOoOoOOOod", "NOoOOOOooOOoOoOooOOo", "TTTTTTTTTTTTTTTTTTTT");
+        document.getElementById("last").innerHTML = choice.no;
+    </script>
+</body>
+</html>

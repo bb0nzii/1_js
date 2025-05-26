@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigInt</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 100;
+            font-style: normal;
+        }
+        pre{background: lightyellow; padding: 10px; line-height: 25px; font-size: 14px; font-family: 'Pretendard-Thin';}
+        h1::before{content: "💖";}
+        h1::after{content: "💖";}
+    </style>
+</head>
+<body>
+
+<h1>BigInt</h1>
+<pre>
+- js로 표현하기에는 너무 큰 정수값을 저장하는 데 사용함
+- 모든 숫자가 64비트 부동 소수점 형식(IEE 754표준)으로 저장됨
+- 이 때문에 js는 정수만 안전하게 표현할 수 있음
+- 9007199254740991 +(2 53 -1) 부터 -9007199254740991 -(2 53 -1)까지의
+  범위로 안전하게 정수를 사용할 수 있음
+- 범위를 벗어나면 정수값은 정밀도가 떨어지기 때문에 BigInt를 사용해야 확인할 수 있음
+- BigInt는 소수 float이 있을 수 없음
+- 특징 : 16진법 8진법 2진법으로 작성할 수 있음
+</pre>
+<p id="nums"></p>
+
+<h1>16진수, 8진수, 2진수</h1>
+<p id="hex"></p>
+
+<script src="js/big.js"></script>
+</body>
+</html>

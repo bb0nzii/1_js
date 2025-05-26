@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3_object</title>
+        <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 100;
+            font-style: normal;
+        }
+        pre{background: lightyellow; padding: 10px; line-height: 25px; font-size: 14px; font-family: 'Pretendard-Thin';}
+        h1::before{content: "💖";}
+        h1::after{content: "💖";}
+    </style>
+</head>
+<body>
+    <h1>class와 object</h1>
+    <p><mark id="phoneFind"></mark></p>
+    <p><mark id="sam"></mark></p>
+    <p id="carFind"></p>
+    <script>
+        const apple = {type: "iphone", model:"15Pro", color:"BlackTitanum"}
+        document.getElementById("phoneFind").innerHTML = "내 전화기는" + apple.type + "이고 모델은" + apple.model + "이고 색상은" + apple.color + "입니다"
+        
+        const samseong = {type: "samseong", model:"s26", color:"black"}
+        document.getElementById("sam").innerHTML = "내 스마트폰은" + samseong.type + "이고 모델은" + samseong.model + "이고 색상은" + samseong.color + "입니다"
+
+        //객체 만들기 | const는 상수(변하지 않는 것), car는 상수명이고, 커맨드라고 함
+        const car = {type:"mercedes", model:"cls", color:"white"};
+        //출력하고 싶은 것을 원하는 대로 나오게 하기 위해 씀(?)
+        document.getElementById("carFind").innerHTML = "내 차는" + car.type + car.model + "색상은" + car.color + "입니당";
+
+    </script>
+
+<pre">
+- 클래스는 객체를 만들기 위한 템플릿
+- 객체는 사물(object)
+- 자동차객체(Car) - 객체는 속성과 메소드(법칙)를 가짐
+    => Properties[car.name = x6, car.weight = 1t] - 속성
+    => Methods[car.start(), car.brake()] - 메소드
+- 객체지향으로 프로그래밍을 하면 사용이 편리함
+</pre>
+
+</body>
+</html>

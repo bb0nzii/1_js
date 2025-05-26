@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 100;
+            font-style: normal;
+        }
+        pre{background: lightyellow; padding: 10px; line-height: 25px; font-size: 14px; font-family: 'Pretendard-Thin';}
+        h1::before{content: "💖";}
+        h1::after{content: "💖";}
+    </style>
+</head>
+<body>
+
+<h1>class</h1>
+<pre>
+- ES6라고 불리는 ECMAScript 2015에서 클래스가 도입됨
+- class는 객체에 대한 템플릿
+- 생성자를 가지고 있음
+  java에서는 클래스명과 생성자가 동일함 (클래스명이 One이면 생성자 또한 One이 됨)
+- js에서는 생성자를 constructor로 사용
+
+<b>- 생성자 : 초기 속성을 지정하는 것</b>
+<b>- 클래스는 객체가 아닌 템플릿</b>
+  Q. 그럼 상속받나요?
+  A. 상속을 받으면 객체로 정의하고 물려받는데, (= 빈 껍데기만 있으면 사용)
+     그렇지 않으면 객체를 정의하고 속성을 정의하고 사용함.
+</pre>
+<p id="in"></p>
+
+<script src="js/class.js"></script>
+</body>
+</html>
